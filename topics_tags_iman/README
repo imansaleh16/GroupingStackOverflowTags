@@ -1,0 +1,3 @@
+dataset_1: tags groups produced by our system for dataset 1
+dataset_2: tags groups produced by our system for dataset 2
+topics_info_file: contains file with tag groups of each topic along with their frequency, used as an example to generate tag intrusion task. (see eval_task.sh script)

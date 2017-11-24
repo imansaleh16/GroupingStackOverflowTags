@@ -1,0 +1,24 @@
+The libraries in this folder are based on the following publication:
+"Automatic organization of semantically related tags using topic modeling", please cite the paper as shown in citation.bib file if you use any of the included resources.
+
+Pre-requisites: download stanford core nlp jar and models in libs/stanford before running code
+
+Files and folders:
+
+1. bin: class files.
+2. data: contains input data (xml file of Stack Overflow dump) and output files.
+3. evaluation_data: word intrusion task files, answers provided by three different annotators and result of comparing answers to gold answers.
+4. libs: jar files required by the project.
+5. topic_tags_iman: groups of tags for each topic produced by our system.
+
+6. clean_posts.sh: input is Stack Overflow dump file, output is text with code snippets removed and data formatted to be used in training mallet topic model. Also titles, tags and metadata of each post are stored in separate files to be used later on.
+7. combine_posts.sh: to generate full data used in training mallet, this script concatenates post title, post text, best answer if available, and tags assigned to the post.
+8. create_2_sets.sh: creates two datasets that were used in our experiments, the first is train and the second is development and test sets combined.
+9. eval_task.sh: creates tag intrusion task.
+10. filter_posts_score_more_5.sh: extract only posts that have score > 5.
+11. generate_noun_and_lemma.sh
+12. get_data_noun_and_lemma.sh: produced only nouns and lemmas of data to be used in training mallet.
+13. pipeline.sh: an example of running the code and producing tag groups for each topic.
+14. score.sh: provide score for tag intrusion task by comparing gold and answers if available.
+15. split_data.sh: splits data randomly, using reservior sampling technique, into training, development, and test sets (60%, 20% and 20% respectively). This split was not used in our experiments however since we needed two splits only. Therefore we used train set as first dataset and dev and test concatenated as second dataset. (refer to script 8).
+17. train_lda.sh
