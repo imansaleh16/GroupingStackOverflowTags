@@ -21,4 +21,4 @@ Files and folders:
 13. pipeline.sh: an example of running the code and producing tag groups for each topic.
 14. score.sh: provide score for tag intrusion task by comparing gold and answers if available.
 15. split_data.sh: splits data randomly, using reservior sampling technique, into training, development, and test sets (60%, 20% and 20% respectively). This split was not used in our experiments however since we needed two splits only. Therefore we used train set as first dataset and dev and test concatenated as second dataset. (refer to script 8).
-17. train_lda.sh: train mallet lda model using pre-processed posts.
+16. train_lda.sh: train mallet lda model using pre-processed posts.
